@@ -3,6 +3,7 @@
     "name": "letsgo",
     "slug": "letsgo",
     "version": "1.0.0",
+    "newArchEnabled": true,
 
     "scheme": "letsgo",
     "web": {
