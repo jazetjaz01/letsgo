@@ -7,13 +7,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'black',
+        tabBarActiveTintColor: 'teal',
+        tabBarInactiveTintColor: "slategrey",
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <HeaderButton />
@@ -22,12 +23,42 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="publish"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Publier',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plus-square-o" color={color} />,
         }}
       />
+
+<Tabs.Screen
+        name="yourtrips"
+        options={{
+          title: 'Vos trajets',
+          tabBarIcon: ({ color }) => <TabBarIcon name="road" color={color} />,
+        }}
+      />
+
+
+
+<Tabs.Screen
+        name="messages"
+        options={{
+          title: 'Messages',
+          tabBarIcon: ({ color }) => <TabBarIcon name="comment-o" color={color} />,
+        }}
+      />
+
+<Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profil',
+          tabBarIcon: ({ color }) => <TabBarIcon name="user-circle-o" color={color} />,
+        }}
+      />
+
+
     </Tabs>
+
+    
   );
 }
