@@ -1,0 +1,111 @@
+[
+    {
+      "id": "1",
+      "departure_city": "Marseille",
+      "place_called_departure": "Le Vieux Port",
+        "arrival_city": "Paris",
+        "place_called_arrival":"Place des Quinconces",
+        "day_trip": "le 12 mai 2025",
+      "time_trip_departure": "12",
+      "time_trip_arrival": "19",
+      "duration_trip": "5",
+      "price":"32",
+      "rate_profile":"4,4",
+       "user":{
+        "id":"1",
+        "avatar_image":"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+        "user_name":"Elon Musk",
+        "rate_user":"4,4"
+       }
+    },
+    
+
+
+    {
+      "id": "2",
+      "departure_city": "Marseille",
+      "place_called_departure": "Le Vieux Port",
+        "arrival_city": "Paris",
+        "place_called_arrival":"Place des Quinconces",
+        "day_trip": "le 12 mai 2025",
+      "time_trip_departure": "12",
+      "time_trip_arrival": "19",
+      "duration_trip": "5",
+      "price":"32",
+      "rate_profile":"4,4",
+       "user":{
+        "id":"2",
+        "avatar_image":"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+        "user_name":"Ouss",
+        "rate_user":"4,4"
+       }
+    },
+
+
+
+    {
+      "id": "3",
+      "departure_city": "Marseille",
+      "place_called_departure": "Le Vieux Port",
+        "arrival_city": "Paris",
+        "place_called_arrival":"Place des Quinconces",
+        "day_trip": "le 12 mai 2025",
+      "time_trip_departure": "12",
+      "time_trip_arrival": "19",
+      "duration_trip": "5",
+      "price":"32",
+      "rate_profile":"4,4",
+       "user":{
+        "id":"3",
+        "avatar_image":"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+        "user_name":"Fares",
+        "rate_user":"4,4"
+       }
+    },
+    
+
+    {
+      "id": "4",
+      "departure_city": "Dax",
+      "place_called_departure": "Le Vieux Port",
+        "arrival_city": "Paris",
+        "place_called_arrival":"Place des Quinconces",
+        "day_trip": "le 12 Juin 2025",
+      "time_trip_departure": "12",
+      "time_trip_arrival": "19",
+      "duration_trip": "5",
+      "price":"32",
+      "rate_profile":"4,4",
+       "user":{
+        "id":"4",
+        "avatar_image":"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+        "user_name":"Fares",
+        "rate_user":"4,4"
+       }
+    },
+
+
+
+    {
+      "id": "5",
+      "departure_city": "Marseille",
+      "place_called_departure": "Le Vieux Port",
+        "arrival_city": "Toulouges",
+        "place_called_arrival":"Place des Quinconces",
+        "day_trip": "le 12 mai 2025",
+      "time_trip_departure": "12",
+      "time_trip_arrival": "19",
+      "duration_trip": "5",
+      "price":"32",
+      "rate_profile":"4,4",
+       "user":{
+        "id":"5",
+        "avatar_image":"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/6.jpg",
+        "user_name":"Alam",
+        "rate_user":"4,1"
+       }
+    },
+
+
+
+  ]
