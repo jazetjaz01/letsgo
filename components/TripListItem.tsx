@@ -1,20 +1,34 @@
 import React from 'react'
-import { Text, View ,Image } from 'react-native'
+import { Text, View ,Image, Pressable } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'; 
 
-export default function TripListItem() {
+import { Link } from 'expo-router';
+
+
+type TripListItemProps = {
+trip:Trip
+
+};
+
+
+export default function TripListItem({trip}: TripListItemProps) {
   return (
-    <View className=' border-slate-300 border rounded-xl m-5 p-5   '>
+    
+       <Link href={`/trips/${trip.id}`} asChild>
+
+      <Pressable>
+        
+    <View className=' border-slate-300 border rounded-xl p-5  min-w-96  '>
 
       <View className='flex-row '>
 
       <View className='mr-5'>
       <Text  className="mb-3" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
-      2H45</Text>
-      <Text  className="underline" style={{  fontFamily: 'Outfit_700Bold', color:'grey', fontSize:10 }} >
-      4H40</Text>
+      {trip.time_trip_departure}h</Text>
+      <Text  className="" style={{  fontFamily: 'Outfit_700Bold', color:'grey', fontSize:12 }} >
+      {trip.duration_trip}h</Text>
       <Text  className="mt-3" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
-     16H45</Text>
+      {trip.time_trip_arrival}h</Text>
       </View>
     
       <View className='mr-5 justify-between'>
@@ -25,16 +39,16 @@ export default function TripListItem() {
 
       <View className='justify-between'>
         <View>
-      <Text  className="" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
-      Marseille</Text>
+      <Text  className="tracking-widest" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
+      {trip.departure_city}</Text>
       <Text  className="" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:12 }} >
-      Rue du Vélodrome</Text>
+      {trip.place_called_departure}</Text>
       </View>
       <View>
-      <Text  className="" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
-      Perpignan</Text>
+      <Text  className="tracking-widest" style={{  fontFamily: 'Outfit_700Bold', color:'darkslategrey', fontSize:14 }} >
+      {trip.arrival_city}</Text>
       <Text  className="" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:12 }} >
-      Palais des Congrès</Text>
+      {trip.place_called_arrival}</Text>
       </View>
      
       </View>
@@ -42,7 +56,7 @@ export default function TripListItem() {
 
         <View className='flex-1 justify-center items-end'>
         <Text  className=" " style={{  fontFamily: 'Outfit_700Bold', color:'teal', fontSize:16 }} >
-        45€</Text>
+      {trip.price} €</Text>
         </View>
       
 
@@ -60,13 +74,13 @@ export default function TripListItem() {
       
       <View>
       <Text  className="underline" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:14 }} >
-        Elon</Text>
+      {trip.user.user_name}</Text>
         <Text  className="" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:14 }} >
-        Avis: 4.3</Text>
+        Avis: {trip.user.rate_user}</Text>
         </View>
         <View className='flex-1 '>
         <Text  className="text-right" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:14 }} >
-        Disponibilité:1</Text>
+        Disponibilité:{trip.available_seat}</Text>
         </View>
 
       </View>
@@ -74,8 +88,12 @@ export default function TripListItem() {
 
 
     
+   
     
     </View>
+   
+    </Pressable>
+    </Link>
     
   )
 }
