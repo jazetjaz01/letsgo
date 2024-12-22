@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import { Outfit_400Regular,Outfit_500Medium,Outfit_700Bold,useFonts } from '@expo-google-fonts/outfit';
 import * as SplashScreen from 'expo-splash-screen';
 import {useEffect} from 'react';
+import AuthProvider from '~/contexts/AuthProvider';
 SplashScreen.preventAutoHideAsync();
 
 
@@ -29,7 +30,7 @@ export default function RootLayout() {
   }
 
   return (
-   
+   <AuthProvider>
     <Stack>
     
           
@@ -38,6 +39,6 @@ export default function RootLayout() {
      
       
     </Stack>
-   
+    </AuthProvider>
   );
 }

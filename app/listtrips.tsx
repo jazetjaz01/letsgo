@@ -9,6 +9,7 @@ export default function ListTrips() {
   return (
  
       <FlatList
+     
       data={trips}
       renderItem={({item}) =><TripListItem trip={item}/>}
       contentContainerStyle={{gap:25, alignItems: 'center', marginTop:'20'}}

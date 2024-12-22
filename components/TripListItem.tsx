@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View ,Image, Pressable } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'; 
 
-import { Link } from 'expo-router';
+import { Link, Stack } from 'expo-router';
 
 
 type TripListItemProps = {
@@ -17,7 +17,7 @@ export default function TripListItem({trip}: TripListItemProps) {
        <Link href={`/trips/${trip.id}`} asChild>
 
       <Pressable>
-        
+      <Stack.Screen options={{title:'Letsgo', headerTintColor:'teal'}} /> 
     <View className=' border-slate-300 border rounded-xl p-5  min-w-96  '>
 
       <View className='flex-row '>
@@ -70,7 +70,7 @@ export default function TripListItem({trip}: TripListItemProps) {
       <FontAwesome name="car" size={14} color="grey" />
      
     
-      <Image  className='w-10 h-10 ml-3 mr-3'  source={require('../assets/elon.gif')} />
+      <Image  className='w-10 h-10 shadow lg:hidden'  source={require('../assets/elon.gif')} />
       
       <View>
       <Text  className="underline" style={{  fontFamily: 'Outfit_400Regular', color:'darkslategrey', fontSize:14 }} >
