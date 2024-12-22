@@ -1,25 +1,18 @@
 import { Stack } from 'expo-router';
-import { Button, StyleSheet, View , } from 'react-native';
-import { Redirect } from 'expo-router';
-import { supabase } from '~/utils/supabase';
-import { ScreenContent } from '~/components/ScreenContent';
+import { StyleSheet, View, Button } from 'react-native';
 import { useAuth } from '~/contexts/AuthProvider';
+import { supabase } from '~/utils/supabase';
+
+
+import { ScreenContent } from '~/components/ScreenContent';
+
 export default function Profile() {
-
-  const { isAuthenticated } = useAuth();
-
-  if (!isAuthenticated) {
-    return <Redirect href="/login" />;
-  }
-
   return (
     <>
       <Stack.Screen options={{ title: 'Profile' }} />
       <View style={styles.container}>
-        <ScreenContent path="app/(tabs)/profile.tsx" title="Profile" />
-      </View>
-    
       <Button title="Sign out" onPress={() => supabase.auth.signOut()} />
+      </View>
     </>
   );
 }

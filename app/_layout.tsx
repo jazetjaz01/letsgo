@@ -5,7 +5,9 @@ import { Outfit_400Regular,Outfit_500Medium,Outfit_700Bold,useFonts } from '@exp
 import * as SplashScreen from 'expo-splash-screen';
 import {useEffect} from 'react';
 import AuthProvider from '~/contexts/AuthProvider';
-SplashScreen.preventAutoHideAsync();
+
+
+ SplashScreen.preventAutoHideAsync(); 
 
 
 export const unstable_settings = {
@@ -27,18 +29,19 @@ export default function RootLayout() {
 
   if (!loaded && !error) {
     return null;
-  }
+  } 
 
   return (
-   <AuthProvider>
+ 
+   
+    <AuthProvider>
     <Stack>
-    
-          
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-     <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-     
-      
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
     </Stack>
-    </AuthProvider>
+  </AuthProvider>
+   
+  
   );
 }

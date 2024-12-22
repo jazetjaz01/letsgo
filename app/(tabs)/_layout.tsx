@@ -2,10 +2,16 @@ import { Link, Redirect, Tabs } from 'expo-router';
 
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
-
+import { useAuth } from '~/contexts/AuthProvider';
+import AuthProvider from '~/contexts/AuthProvider';
 
 export default function TabLayout() {
-  
+  const { isAuthenticated } = useAuth();
+
+  if (!isAuthenticated) {
+    return <Redirect href="/login" />;
+  }
+
 
   return (
 
@@ -28,6 +34,7 @@ export default function TabLayout() {
           ),
         }}
       />
+     
       <Tabs.Screen
         name="publish"
         options={{
@@ -35,6 +42,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="plus-square-o" color={color} />,
         }}
       />
+     
 
 <Tabs.Screen
         name="yourtrips"
@@ -65,4 +73,5 @@ export default function TabLayout() {
 
     </Tabs> );
 }
+  
   
