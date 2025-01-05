@@ -50,9 +50,9 @@ export default function Auth() {
 
   return (
     <View className='gap-10 bg-white flex-1 p-10'>
-      <Stack.Screen options={{ title: 'Se connecter',headerTitleAlign: 'center', headerTintColor:'#64748b', headerTitleStyle:{fontFamily:'Outfit_500Medium'}} }  />
+      <Stack.Screen options={{ title: 'Inscription',headerTitleAlign: 'center', headerTintColor:'#64748b', headerTitleStyle:{fontFamily:'Outfit_500Medium'}} }  />
       <View >
-        <Text className='pt-10 pb-10 text-4xl  'style={{  fontFamily: 'Outfit_700Bold', color:'#64748b', }}>Je me connecte</Text>
+        <Text className='pt-10 pb-10 text-4xl  'style={{  fontFamily: 'Outfit_700Bold', color:'#64748b', }}>Je m'inscris</Text>
         <TextInput
           
           onChangeText={(text) => setEmail(text)}
@@ -88,12 +88,12 @@ export default function Auth() {
     
       <View className="flex-row gap-3 ">
         <Pressable 
-          onPress={() => signInWithEmail()}
+          onPress={() => signUpWithEmail()}
           disabled={loading}
           
           className="flex-1 items-center rounded-2xl  border border-gray-300 p-3 px-8 ">
            
-           <Text className=" text-center text-xl  text-slate-500" style={{fontFamily:'Outfit_500Medium'}}>Se connecter</Text>
+           <Text className=" text-center text-xl  text-slate-500" style={{fontFamily:'Outfit_500Medium'}}>S'inscrire</Text>
       
 
         </Pressable>
@@ -104,17 +104,9 @@ export default function Auth() {
       </View> */}
       </View>
      
-      <Link href="/forgot" asChild>
-                <Pressable>
-                
-                <View className='   mt-12'>
-                <Text className='underline p-3 text-lg  tracking-widest 'style={{  fontFamily: 'Outfit_500Medium', color:'#64748b', }}>Mot  de passe oublié</Text>
-                </View>
-               
-                </Pressable>
-                </Link> 
+     
 
-                <Link href="/cgu" asChild>
+      <Link href="/cgu" asChild>
                 <Pressable>
                 
                 <View className='   mt-12 flex-row items-center'>

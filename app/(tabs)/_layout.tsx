@@ -4,11 +4,11 @@ import { HeaderButton } from '../../components/HeaderButton';
 import { useAuth } from '~/contexts/AuthProvider';
 
 export default function TabLayout() {
-  const { isAuthenticated } = useAuth();
+ const { isAuthenticated } = useAuth();
 
   if (!isAuthenticated) {
-    return <Redirect href="/login" />;
-  }
+    return <Redirect href="/welcome" />;
+  } 
   return (
     <Tabs
       screenOptions={{
